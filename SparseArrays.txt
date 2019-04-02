@@ -1,0 +1,22 @@
+static int[] matchingStrings(String[] strings, String[] queries) {
+        int len1=queries.length;// Finding the length of the Strings
+        int len2=strings.length;// Finding the length of the Queries
+        int count[]=new int[len1];
+        for(int i=0;i<len1;i++)// Iterating the loop until it reaches the Length of Querie
+        {
+            int c=0;
+            for(int j=0;j<len2;j++)// Iterating the loop until it reaches the Length of String
+            {
+		/* checking whether the Querie present in
+			the String arrays or no */
+                if(strings[j].equals(queries[i]))
+                {
+                    c++;
+                }
+            }
+           count[i]=c;// updating the count array
+           c=0;
+        }
+        return count;// returing the count array 
+       
+    }
